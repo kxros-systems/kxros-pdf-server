@@ -1,15 +1,13 @@
 {
   "name": "puppeteer-pdf",
   "version": "1.0.0",
-  "description": "Cloud-native PDF generator with Puppeteer",
-  "main": "server.js",
-"scripts": {
-  "start": "node server.js"
-},
-  "author": "Chase Premone",
-  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "postinstall": "PUPPETEER_CACHE_DIR=/opt/render/project/.cache npx puppeteer install",
+    "start": "node server.js"
+  },
   "dependencies": {
-  "express": "^5.1.0",
-  "puppeteer": "19.11.1"
+    "express": "^5.1.0",
+    "puppeteer": "^22.9.0"
   }
 }
