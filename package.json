@@ -4,13 +4,12 @@
   "description": "Cloud-native PDF generator with Puppeteer",
   "main": "server.js",
   "scripts": {
-    "postinstall": "npx puppeteer install",
     "start": "node server.js"
   },
   "author": "Chase Premone",
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0",
-    "puppeteer": "^24.9.0"
+    "puppeteer": "^19.11.1"
   }
 }
