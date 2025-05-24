@@ -2,10 +2,11 @@
   "name": "puppeteer-pdf",
   "version": "1.0.0",
   "scripts": {
-  "start": "node server.js"
+    "postinstall": "if [ \"$RENDER\" = \"true\" ]; then npx puppeteer browsers install chrome --path=$PUPPETEER_CACHE_DIR; fi",
+    "start": "node server.js"
   },
   "dependencies": {
-  "express": "^5.1.0",
-  "puppeteer-with-browser": "^22.9.0"
+    "express": "^5.1.0",
+    "puppeteer": "^22.9.0"
   }
 }
