@@ -34,7 +34,14 @@ app.post('/generate-pdf', async (req, res) => {
     await browser.close();
 
     // Stream the file back
-    res.download(pdfPath, 'output.pdf');
+    res.set({
+  'Content-Type': 'application/pdf',
+  'Content-Disposition': `attachment; filename="${filename || 'output.pdf'}"`
+});
+console.log(`✅ Sending file: ${pdfPath}`);
+
+res.sendFile(pdfPath);
+
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to generate PDF.' });
