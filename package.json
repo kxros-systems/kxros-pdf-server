@@ -2,11 +2,10 @@
   "name": "puppeteer-pdf",
   "version": "1.0.0",
   "scripts": {
-    "postinstall": "PUPPETEER_CACHE_DIR=/opt/render/project/.cache npx puppeteer install",
-    "start": "node server.js"
+  "start": "node server.js"
   },
   "dependencies": {
-    "express": "^5.1.0",
-    "puppeteer": "^22.9.0"
+  "express": "^5.1.0",
+  "puppeteer-with-browser": "^22.9.0"
   }
 }
